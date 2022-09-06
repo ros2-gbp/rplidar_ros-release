@@ -1,0 +1,12 @@
+Source: ros-galactic-rplidar-ros
+Section: misc
+Priority: optional
+Maintainer: Hunter L. Allen <hunterlallen@protonmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-galactic-ament-cmake-auto, ros-galactic-ament-cmake-ros, ros-galactic-rclcpp, ros-galactic-rclcpp-components, ros-galactic-sensor-msgs, ros-galactic-std-srvs, ros-galactic-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-galactic-rplidar-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-galactic-rclcpp, ros-galactic-rclcpp-components, ros-galactic-sensor-msgs, ros-galactic-std-srvs, ros-galactic-ros-workspace
+Description: The rplidar ros package, support rplidar A2/A1 and A3/S1
