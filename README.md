@@ -1,3 +1,26 @@
+## rplidar_ros (humble) - 2.1.2-1
+
+The packages in the `rplidar_ros` repository were released into the `humble` distro by running `/usr/bin/bloom-release --new-track --rosdistro humble --track humble rplidar_ros` on `Mon, 12 Jun 2023 06:59:50 -0000`
+
+The `rplidar_ros` package was released.
+
+Version of package(s) in repository `rplidar_ros`:
+
+- upstream repository: https://github.com/Slamtec/rplidar_ros
+- release repository: https://github.com/ros2-gbp/rplidar_ros-release.git
+- rosdistro version: `2.1.0-1`
+- old version: `2.1.0-1`
+- new version: `2.1.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## rplidar_ros (rolling) - 2.1.0-1
 
 The packages in the `rplidar_ros` repository were released into the `rolling` distro by running `/usr/lib/python-exec/python3.10/bloom-release --track rolling --ros-distro rolling rplidar_ros` on `Tue, 06 Sep 2022 14:42:48 -0000`
