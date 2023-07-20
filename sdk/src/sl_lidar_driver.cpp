@@ -446,7 +446,7 @@ namespace sl {
             }
 
             //get scan answer type to specify how to wait data
-            sl_u8 scanAnsType;
+            sl_u8 scanAnsType = 0;
             if (ifSupportLidarConf) {
                 getScanModeAnsType(scanAnsType, scanMode);
             }
@@ -637,6 +637,19 @@ namespace sl {
 			return ans;
 		}
 
+        sl_result getLidarIpConf(sl_lidar_ip_conf_t& conf, sl_u32 timeout)
+        {
+            Result<nullptr_t> ans = SL_RESULT_OK;
+            std::vector<sl_u8> reserve(2);
+
+            std::vector<sl_u8> answer;
+            ans = getLidarConf(SL_LIDAR_CONF_LIDAR_STATIC_IP_ADDR, answer, reserve, timeout);
+            int len = answer.size();
+            if (0 == len) return SL_RESULT_INVALID_DATA;
+            memcpy(&conf, &answer[0], len);
+            return ans;
+        }
+       
         sl_result getHealth(sl_lidar_response_device_health_t& health, sl_u32 timeout = DEFAULT_TIMEOUT)
         {
             Result<nullptr_t> ans = SL_RESULT_OK;
@@ -873,7 +886,7 @@ namespace sl {
                 rp::hal::AutoLocker l(_lock);
                 ans = _sendCommand(SL_LIDAR_CMD_GET_LIDAR_CONF, &query, sizeof(query));
                 if (!ans) return ans;
-				//delay(50);
+				delay(50);
                 // waiting for confirmation
                 sl_lidar_ans_header_t response_header;
                 ans = _waitResponseHeader(&response_header, timeout);
@@ -1055,7 +1068,6 @@ namespace sl {
         
         sl_result  _sendCommand(sl_u16 cmd, const void * payload = NULL, size_t payloadsize = 0 )
         {
-            sl_u8 pkt_header[10];
             sl_u8 checksum = 0;
 
             std::vector<sl_u8> cmd_packet;
@@ -1086,7 +1098,7 @@ namespace sl {
   
             }
             sl_u8 packet[1024];
-            for (int pos = 0; pos < cmd_packet.size(); pos++) {
+            for (sl_u32 pos = 0; pos < cmd_packet.size(); pos++) {
                 packet[pos] = cmd_packet[pos];
             }
             _channel->write(packet, cmd_packet.size());
@@ -1342,7 +1354,7 @@ namespace sl {
 
                     int dist_major2;
 
-                    sl_u32 scalelvl1, scalelvl2;
+                    sl_u32 scalelvl1 = 0, scalelvl2 = 0;
 
                     // prefetch next ...
                     if (pos == _countof(_cached_previous_ultracapsuledata.ultra_cabins) - 1) {
