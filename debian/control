@@ -1,0 +1,12 @@
+Source: ros-humble-rplidar-ros
+Section: misc
+Priority: optional
+Maintainer: Wang DeYou <deyou.wang@slamtec.com>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake-auto, ros-humble-ament-cmake-ros, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-sensor-msgs, ros-humble-std-srvs, ros-humble-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-humble-rplidar-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-sensor-msgs, ros-humble-std-srvs, ros-humble-ros-workspace
+Description: The rplidar ros package, support rplidar A1/A2/A3/S1/S2/S3/T1
