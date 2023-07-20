@@ -2,8 +2,9 @@
 Changelog for package rplidar_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.1.3 (2023-07-18)
+2.1.3 (2023-07-20)
 ------------------
+* Bugfix:auto standby mode not work
 * Rename SLLidar* to RPLidar* in rplidar_node.cpp
 * Renaming variable m_running to is_scanning
 * Update README
