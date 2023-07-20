@@ -1,5 +1,5 @@
 /*
- * Slamtec RPLIDAR SDK
+ * Slamtec LIDAR SDK
  *
  *  Copyright (c) 2014 - 2020 Shanghai Slamtec Co., Ltd.
  *  http://www.slamtec.com
