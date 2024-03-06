@@ -1,0 +1,12 @@
+Source: ros-rolling-rplidar-ros
+Section: misc
+Priority: optional
+Maintainer: Hunter L. Allen <hunterlallen@protonmail.com>
+Build-Depends: debhelper (>= 9.0.0), ament-cmake, ament-cmake-ros, libsensor-msgs-dev, libstd-srvs-dev, python3-sensor-msgs, python3-std-srvs, ros-rolling-rclcpp, ros-rolling-rclcpp-components, ros-sensor-msgs, ros-std-srvs, ros-rolling-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-rolling-rplidar-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libsensor-msgs-dev, libstd-srvs-dev, python3-sensor-msgs, python3-std-srvs, ros-rolling-rclcpp, ros-rolling-rclcpp-components, ros-sensor-msgs, ros-std-srvs, ros-rolling-ros-workspace
+Description: The rplidar ros package, support rplidar A2/A1 and A3/S1
