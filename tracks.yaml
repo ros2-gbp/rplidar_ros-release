@@ -123,7 +123,7 @@ tracks:
     last_version: 2.1.0
     name: rplidar_ros
     patches: null
-    release_inc: '2'
+    release_inc: '3'
     release_repo_url: https://github.com/ros2-gbp/rplidar_ros-release.git
     release_tag: :{version}
     ros_distro: rolling
