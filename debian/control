@@ -1,0 +1,12 @@
+Source: ros-jazzy-rplidar-ros
+Section: misc
+Priority: optional
+Maintainer: Hunter L. Allen <hunterlallen@protonmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake-auto, ros-jazzy-ament-cmake-ros, ros-jazzy-rclcpp, ros-jazzy-rclcpp-components, ros-jazzy-sensor-msgs, ros-jazzy-std-srvs, ros-jazzy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-rplidar-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-rclcpp, ros-jazzy-rclcpp-components, ros-jazzy-sensor-msgs, ros-jazzy-std-srvs, ros-jazzy-ros-workspace
+Description: The rplidar ros package, support rplidar A2/A1 and A3/S1
