@@ -1,0 +1,12 @@
+Source: ros-kilted-rplidar-ros
+Section: misc
+Priority: optional
+Maintainer: Hunter L. Allen <hunterlallen@protonmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake-auto, ros-kilted-ament-cmake-ros, ros-kilted-rclcpp, ros-kilted-rclcpp-components, ros-kilted-sensor-msgs, ros-kilted-std-srvs, ros-kilted-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kilted-rplidar-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-rclcpp, ros-kilted-rclcpp-components, ros-kilted-sensor-msgs, ros-kilted-std-srvs, ros-kilted-ros-workspace
+Description: The rplidar ros package, support rplidar A2/A1 and A3/S1
