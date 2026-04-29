@@ -1,0 +1,12 @@
+Source: ros-lyrical-rplidar-ros
+Section: misc
+Priority: optional
+Maintainer: Hunter L. Allen <hunterlallen@protonmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake-auto, ros-lyrical-ament-cmake-ros, ros-lyrical-rclcpp, ros-lyrical-rclcpp-components, ros-lyrical-sensor-msgs, ros-lyrical-std-srvs, ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/rplidar_ros/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-rplidar-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-rclcpp, ros-lyrical-rclcpp-components, ros-lyrical-sensor-msgs, ros-lyrical-std-srvs, ros-lyrical-ros-workspace
+Description: The rplidar ros package, support rplidar A2/A1 and A3/S1
